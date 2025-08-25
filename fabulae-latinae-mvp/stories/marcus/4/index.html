@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Latin stories for all learners and levels." />
+    <link href="../../../static/images/favicon.png" rel="icon" type="image/png" />
+    <title>Marcus spectat — Capiti IV · Latin for Complete Beginners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* tooltip base */
+      .gloss-tip { 
+        position: absolute; 
+        z-index: 50; 
+      }
+      .hidden {
+        display: none !important;
+      }
+      /* Make clickable words more obvious */
+      s-w {
+        cursor: pointer;
+        border-bottom: 1px dotted #dc2626;
+        transition: all 0.2s ease;
+        padding: 2px 1px;
+        border-radius: 3px;
+      }
+      s-w:hover {
+        background-color: #fef2f2;
+        border-bottom-color: #b91c1c;
+        transform: translateY(-1px);
+      }
+      /* Make sentences double-clickable */
+      s-sent {
+        cursor: pointer;
+        padding: 4px 2px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+      }
+      s-sent:hover {
+        background-color: #fef2f2;
+        border: 1px dashed #dc2626;
+      }
+      /* Story text styling */
+      .stext {
+        font-size: 1.125rem;
+        line-height: 1.7;
+      }
+      .s-separated s-sent {
+        margin-bottom: 1rem;
+      }
+      .s-separated s-sent:last-child {
+        margin-bottom: 0;
+      }
+      /* Tooltip styling */
+      .gloss-tip {
+        position: fixed;
+        z-index: 1000;
+        pointer-events: none;
+        background: white;
+        border: 1px solid #dc2626;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.1);
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        max-width: 20rem;
+      }
+      .gloss-tip.hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-red-50 text-gray-900 min-h-screen flex flex-col">
+
+<header class="bg-white border-b-4 border-red-600">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+    <a class="font-bold tracking-tight text-lg text-red-700" href="../../../index.html">Latin for Complete Beginners</a>
+    <div class="text-sm text-gray-700 space-x-3">
+      <a class="px-1 hover:text-red-600 hover:underline hidden sm:inline" href="../../../start-here/index.html">Start Here</a>
+      <a class="px-1 hover:text-red-600 hover:underline" href="../../../library/index.html">Library</a>
+      <a class="px-1 hover:text-red-600 hover:underline" href="../../../resources/index.html">Resources</a>
+      <a class="px-1 hover:text-red-600 hover:underline" href="../../../about/index.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main class="flex-1">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <nav class="flex items-center justify-between mb-4">
+      <span class="flex-1">&nbsp;</span>
+      <div class="text-center text-gray-600">
+  <a class="font-bold text-xl hover:text-red-600 transition-colors" href="index.html">
+    Capitulum 4
+  </a><br>
+  <span class="text-sm">(Series: Marcus)</span>
+</div>
+      <a class="flex-1 text-right block hover:text-red-600 transition-colors text-gray-700" href="../../../library/index.html">library →</a>
+    </nav>
+    <article class="bg-white p-6 sm:p-8 rounded-2xl shadow border-2 border-red-200">
+      <div class="md:flex items-start justify-between gap-4">
+        <h1 class="text-3xl font-bold text-red-700">Capitulum 4</h1>
+        <div class="mt-4 md:mt-0"><div class="flex items-center gap-3">
+  <button id="dec-font" class="px-3 py-1.5 rounded border-2 border-red-300 bg-white hover:bg-red-50 text-red-700 transition-colors">a</button>
+  <button id="inc-font" class="px-3 py-1.5 rounded border-2 border-red-300 bg-white hover:bg-red-50 text-red-700 transition-colors">A</button>
+</div></div>
+      </div>
+      <div id="story" class="border-t-2 border-red-200 pt-6 mt-6">
+        <!-- Help section -->
+        <div class="bg-red-50 border-2 border-red-200 rounded-xl p-4 mb-6">
+          <div class="flex items-start gap-3">
+            <div class="text-red-600 text-lg">💡</div>
+            <div class="text-sm text-gray-700">
+              <div class="font-semibold text-red-700 mb-1">Translation Help:</div>
+              <div class="space-y-1">
+                <div>• <strong>Single-click</strong> any Latin word to see its meaning</div>
+                <div>• <strong>Double-click</strong> any sentence to see the full translation</div>
+                <div>• Press <strong>Escape</strong> to close tooltips</div>
+                <div>• Use <strong>A/a</strong> buttons to toggle text capitalization</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:flex justify-between">
+          <section id="story-text" class="stext s-separated text-2xl max-w-none leading-relaxed grow mr-8">
+            <p>
+              <s-sent title="Where! Where! Where!"><s-w w="Ubi" p="">Ubi</s-w>! <s-w w="Ubi" p="">Ubi</s-w>! <s-w w="Ubi" p="">Ubi</s-w>!</s-sent>
+            </p>
+            <p>
+              <s-sent title="Marcus looks up."><s-w w="Marcus" p="">Marcus</s-w> <s-w w="sursum" p="">sursum</s-w> <s-w w="spectat" p="">spectat</s-w>.</s-sent>
+            </p>
+            <p>
+              <s-sent title="What does Marcus see?"><s-w w="Marcus" p="">Marcus</s-w> <s-w w="quid" p="">quid</s-w> <s-w w="videt" p="">videt</s-w>?</s-sent>
+            </p>
+            <p>
+              <s-sent title="Marcus sees a peacock."><s-w w="Marcus" p="">Marcus</s-w> <s-w w="pavonem" p="">pavonem</s-w> <s-w w="videt" p="">videt</s-w>.</s-sent>
+            </p>
+            <p>
+              <s-sent title="The peacock is beautiful."><s-w w="Pavo" p="">Pavo</s-w> <s-w w="est" p="">est</s-w> <s-w w="pulcher" p="">pulcher</s-w>.</s-sent>
+            </p>
+            <p>
+              <s-sent title="The peacock has beautiful feathers."><s-w w="Pavo" p="">Pavo</s-w> <s-w w="pulchras" p="">pulchras</s-w> <s-w w="plumas" p="">plumas</s-w> <s-w w="habet" p="">habet</s-w>.</s-sent>
+            </p>
+          </section>
+          <figure class="flex-none sm:w-[400px] sm:mr-4">
+            <img class="sticky" src="../../../static/images/peacock.png" alt="Beautiful peacock" />
+          </figure>
+        </div>
+      </div>
+    </article>
+    <nav class="flex items-center justify-between text-gray-700">
+      <a class="block p-6 hover:text-red-600 transition-colors" href="../3/index.html">← previous chapter</a>
+      <a class="block p-6 hover:text-red-600 transition-colors" href="../5/index.html">next chapter →</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="mt-16 bg-red-100 text-gray-700">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <p class="text-center">
+      Unless otherwise noted, all original content is provided under
+      <a class="underline hover:text-red-600" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal</a> (public domain).
+    </p>
+    <div class="mt-6 text-center text-sm text-red-700">Verum dic · Virtutem cole</div>
+  </div>
+</footer>
+
+<script>
+    // MEANINGS object for click-to-translate functionality
+    const MEANINGS = {"words": {
+      "Marcus": {"en": "Marcus (name)", "t": ["proper noun"]},
+      "est": {"en": "is", "t": ["verb"]},
+      "Ubi": {"en": "Where", "t": ["adverb"]},
+      "quid": {"en": "what", "t": ["pronoun"]},
+      "videt": {"en": "sees", "t": ["verb"]},
+      "sursum": {"en": "up", "t": ["adverb"]},
+      "spectat": {"en": "looks", "t": ["verb"]},
+      "pavonem": {"en": "peacock", "t": ["noun"]},
+      "Pavo": {"en": "Peacock", "t": ["noun"]},
+      "pulcher": {"en": "beautiful", "t": ["adjective"]},
+      "pulchras": {"en": "beautiful", "t": ["adjective"]},
+      "plumas": {"en": "feathers", "t": ["noun"]},
+      "habet": {"en": "has", "t": ["verb"]}
+    }, "phrases": {}};
+    
+    // Sentence translations for double-click functionality
+    const SENTENCE_TRANSLATIONS = {
+      "Ubi! Ubi! Ubi!": "Where! Where! Where!",
+      "Marcus sursum spectat.": "Marcus looks up.",
+      "Marcus quid videt?": "What does Marcus see?",
+      "Marcus pavonem videt.": "Marcus sees a peacock.",
+      "Pavo est pulcher.": "The peacock is beautiful.",
+      "Pavo pulchras plumas habet.": "The peacock has beautiful feathers."
+    };
+    
+    // Click-to-translate functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded, setting up click-to-translate...');
+        
+        // Create tooltip element
+        const tooltip = document.createElement('div');
+        tooltip.id = 'gloss-tip';
+        tooltip.className = 'gloss-tip hidden';
+        document.body.appendChild(tooltip);
+        console.log('Tooltip element created');
+        
+        // Handle clicks on Latin words (single click)
+        document.addEventListener('click', function(e) {
+            const wordElement = e.target.closest('s-w');
+            if (wordElement) {
+                console.log('Word clicked:', wordElement.textContent);
+                const wordId = wordElement.getAttribute('w');
+                const wordData = MEANINGS.words[wordId];
+                
+                if (wordData) {
+                    console.log('Word data found:', wordData);
+                    const pos = (wordData.t || []).join(', ');
+                    const gloss = wordData.en || '(no gloss)';
+                    
+                    const rect = wordElement.getBoundingClientRect();
+                    const x = rect.left + rect.width/2;
+                    const y = rect.bottom + 10;
+                    
+                    tooltip.innerHTML = `
+                        <div class="font-semibold">${wordElement.textContent.trim()}</div>
+                        <div class="text-gray-700">${gloss}</div>
+                        ${pos ? `<div class="text-red-600 mt-1">${pos}</div>` : ''}
+                    `;
+                    
+                    // Position tooltip
+                    tooltip.style.left = Math.max(8, x - tooltip.offsetWidth/2) + 'px';
+                    tooltip.style.top = y + 'px';
+                    tooltip.classList.remove('hidden');
+                    console.log('Tooltip shown');
+                } else {
+                    console.log('No word data found for ID:', wordId);
+                    tooltip.classList.add('hidden');
+                }
+                return;
+            }
+            
+            // Hide tooltip when clicking outside
+            if (!e.target.closest('#gloss-tip')) {
+                tooltip.classList.add('hidden');
+            }
+        });
+        
+        // Handle double-clicks on sentences
+        document.addEventListener('dblclick', function(e) {
+            const sentenceElement = e.target.closest('s-sent');
+            if (sentenceElement) {
+                console.log('Sentence double-clicked:', sentenceElement.textContent);
+                const sentenceText = sentenceElement.textContent.trim();
+                const translation = SENTENCE_TRANSLATIONS[sentenceText];
+                
+                if (translation) {
+                    console.log('Translation found:', translation);
+                    
+                    // Create a larger tooltip for sentence translation
+                    const rect = sentenceElement.getBoundingClientRect();
+                    const x = rect.left + rect.width/2;
+                    const y = rect.bottom + 10;
+                    
+                    tooltip.innerHTML = `
+                        <div class="font-semibold text-red-700 mb-2">Full Translation</div>
+                        <div class="text-gray-700 mb-2">${sentenceText}</div>
+                        <div class="text-lg font-medium text-green-700">${translation}</div>
+                    `;
+                    
+                    // Position tooltip
+                    tooltip.style.left = Math.max(8, x - tooltip.offsetWidth/2) + 'px';
+                    tooltip.style.top = y + 'px';
+                    tooltip.classList.remove('hidden');
+                    console.log('Sentence tooltip shown');
+                } else {
+                    console.log('No translation found for sentence:', sentenceText);
+                    tooltip.classList.add('hidden');
+                }
+                return;
+            }
+        });
+        
+        // Close tooltip with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                tooltip.classList.add('hidden');
+            }
+        });
+        
+        console.log('Click-to-translate setup complete');
+    });
+
+    // Font case controls (uppercase/lowercase)
+    document.addEventListener('DOMContentLoaded', function() {
+        const incFont = document.getElementById('inc-font');
+        const decFont = document.getElementById('dec-font');
+        const storyText = document.getElementById('story-text');
+        
+        incFont.addEventListener('click', function() {
+            storyText.style.textTransform = 'uppercase';
+        });
+        
+        decFont.addEventListener('click', function() {
+            storyText.style.textTransform = 'lowercase';
+        });
+    });
+</script>
+</body>
+</html>
