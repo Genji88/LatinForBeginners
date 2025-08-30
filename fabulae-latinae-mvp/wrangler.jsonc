@@ -2,6 +2,7 @@
   "name": "latin-for-complete-beginners",
   "compatibility_date": "2025-08-30",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "include": ["**/*.html", "**/*.css", "**/*.js", "**/*.png", "**/*.ico", "**/*.svg"]
   }
 }
